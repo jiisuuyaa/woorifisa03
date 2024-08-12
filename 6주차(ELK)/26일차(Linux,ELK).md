@@ -140,7 +140,7 @@ POST my_index2/_search?q=title:"world hello"
 - **Mapping(매핑)** : 문서가 인덱스에 어떻게 저장되는지 정의하는 부분(sql의 자료형과 비슷)
   - 동적매핑 : 엘라스틱 서치가 자동으로 생성하는 맵핑
   - 명시적매핑 : 사용자가 문서의 각 필드에 데이터를 어떠한 형태로 저장할지 설정으로 지정해주는 맵핑
-- ✔ 엘라스틱 서치 & 관계형 데이터 베이 |
+- ✔ **elastic search VS RDBMS** |
 
 |Elasticsearch|RDBMS|
 |------|---|
