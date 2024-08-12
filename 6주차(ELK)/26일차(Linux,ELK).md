@@ -6,7 +6,7 @@
 - **Elastic stack** : Elasticsearch[분석,저장], Logstash[수집], Kibana[시각화 도구]
   - Elastic search : 엘라스틱서치는 검색엔진, NoSQL 데이터를 저장하여 이들을 검색
   - NoSQL에서 인덱스는 MySQL에서 DB를 의미함
-  - <br><br>
+<br><br>
 1. 인덱스 생성 및 조회
 ```JavaScript
 PUT /my_index ### 'my_index' 라는 이름의 새로운 인덱스 생성
@@ -143,9 +143,7 @@ POST my_index2/_search?q=title:"world hello"
 - ✔ 엘라스틱 서치 & 관계형 데이터 베이 |
 
 |Elasticsearch|RDBMS|
-
 |------|---|
-
 |인덱스|데이터베이스|
 |타입|테이블|
 |문서|행|
