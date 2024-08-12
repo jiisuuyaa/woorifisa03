@@ -3,16 +3,17 @@
 - 도커, 리눅스가 얼레벌레 아는 상태로 끝나버려서 ELK부터는 꼬옥 정리하면서 매일 복습하기 !!! 야금야금 이전 개념도 복습하기 !!!
 
 <br><br>
--**Elastic stack** : Elasticsearch[분석,저장], Logstash[수집], Kibana[시각화 도구]
+- **Elastic stack** : Elasticsearch[분석,저장], Logstash[수집], Kibana[시각화 도구]
   - Elastic search : 엘라스틱서치는 검색엔진, NoSQL 데이터를 저장하여 이들을 검색
   - NoSQL에서 인덱스는 MySQL에서 DB를 의미함
-- 1. 인덱스 생성 및 조회
+  - <br><br>
+1. 인덱스 생성 및 조회
 ```JavaScript
 PUT /my_index ### 'my_index' 라는 이름의 새로운 인덱스 생성
 GET /my_index/_search # 'my_index'에서 모든 문서를 검색(처음이라 아직 없을 수 있다)
 ```
 
-- 2. 문서 추가/조회
+2. 문서 추가/조회
 ```JavaScript
 POST /my_index/_doc
 {
@@ -23,7 +24,7 @@ POST /my_index/_doc
 # 'my_index'에 새로운 문서를 추기, 이 문서에는 id,title,description 이 포함됨
 ```
 
-- 3. 문서 삽입
+3. 문서 삽입
 ```JavaScript
 PUT my_index/_doc/1
 {
@@ -33,13 +34,13 @@ PUT my_index/_doc/1
 # 'my_index'에 ID가 '1'인 문서를 추가, 이 문서에는 'title'과 'content'가 포함됨
 ```
 
-- 4. 문서 조회
+4. 문서 조회
 ```JavaScript
 GET my_index/_doc/1
 # 'my_index'에서 ID가 '1'인 문서를 조회
 ```
 
-- 5. 문서 수정
+5. 문서 수정
 ```JavaScript
 POST my_index/_update/1
 {
@@ -51,7 +52,7 @@ POST my_index/_update/1
 # ID가 1인 문서의 'title' 필드를 '수정할 제목'으로 수정
 ```
 
-- 6. 문서 삭제
+6. 문서 삭제
 ```JavaScript
 DELETE my_index/_doc/1
 # ID가 1인 문서를 삭제
@@ -60,7 +61,7 @@ DELETE my_index/
 # 전체 인덱스 삭제
 ```
 
-- 7. 문서 삽입(자동 ID 생성)
+7. 문서 삽입(자동 ID 생성)
 ```JavaScript
 POST my_index/_doc/
 {
@@ -70,7 +71,7 @@ POST my_index/_doc/
 # 'my_index'에 새로운 문서를 추가 , 엘라스틱서치가 자동으로 id를 생성해줌
 ```
 
-- 8. 특정조건 가진 문서 조회
+8. 특정조건 가진 문서 조회
 ```JavaScript
 POST my_index/_search
 {
@@ -86,7 +87,7 @@ GET my_index/_search
 # 'my_index'에서 모든 문서를 검색
 ```
 
-- 9. 문서 전체를 수정
+9. 문서 전체를 수정
 ```JavaScript
 POST my_index/_doc/mz8FRZEBXpMqRqjivLHY
 {
@@ -99,7 +100,7 @@ POST my_index/_doc/mz8FRZEBXpMqRqjivLHY
 # 문서 전체를 새로운 데이터로 교체(_doc/mz8FRZEBXpMqRqjivLHY의 데이터를 바꿈)
 ```
 
-- 10. 자료형 확인, 맵핑
+10. 자료형 확인, 맵핑
 ```JavaScript
 GET my_index
 # 'my_index' 의 설정과 자료형을 조회
@@ -123,7 +124,7 @@ PUT my_index2
 # 'my_index2' 라는 새로운 인덱스를 생성, 각각의 필드의 자료형을 명시적으로 지정해줌 !
 ```
 
-- 11. 문서 검색
+11. 문서 검색
 ```JavaScript
 GET my_index2/_search
 # 'my_index2'에서 모든 문서 검색
@@ -139,11 +140,15 @@ POST my_index2/_search?q=title:"world hello"
 - **Mapping(매핑)** : 문서가 인덱스에 어떻게 저장되는지 정의하는 부분(sql의 자료형과 비슷)
   - 동적매핑 : 엘라스틱 서치가 자동으로 생성하는 맵핑
   - 명시적매핑 : 사용자가 문서의 각 필드에 데이터를 어떠한 형태로 저장할지 설정으로 지정해주는 맵핑
-- ✔ 엘라스틱 서치 & 관계형 데이터 베이스
-|    엘라스틱서치    |   RDBMS  | 
-| :---------------:  | :------: | 
-|  인덱스 | 데이터베이스 |
-| 타입 | 테이블 | 
-|  문서 | 행 |
-|  필드 | 열 |
-|  매핑 | 스키마 |
+- ✔ 엘라스틱 서치 & 관계형 데이터 베이 |
+
+|Elasticsearch|RDBMS|
+
+|------|---|
+
+|인덱스|데이터베이스|
+|타입|테이블|
+|문서|행|
+|필드|열|
+|매핑|스키마|
+
