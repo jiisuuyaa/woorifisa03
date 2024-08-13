@@ -83,7 +83,7 @@ GET my_bulk/_search
 
 ```JavaScript
 # 1. 인덱스 생성 및 분석기 설정
-# 엘라스틱서치에서는 문서를 인덱싱할 때 사용하는 분석기와 검색할 때 사용하는 분석기가 동일해야 적절히 매칭됩니다.
+# 엘라스틱서치에서는 문서를 인덱싱할 때 사용하는 분석기와 검색할 때 사용하는 분석기가 동일해야 적절히 매칭됨
 	#  "aws, amazon, cloud",
             # "pc, personal computer, ibm, mac"
             
@@ -183,7 +183,7 @@ PUT normalizer_test
 - 'myNormalizerKeyword' 필드는 아스키 폴딩 및 대문자 변환으로 텍스트 저장
 - 'lowercaseKeyword' 필드는 텍스트를 모두 소문자로 변환
 - 'defaultKeyword' 필드는 텍스트를 변환하지 않고 원래대로 저장
-  
+<br>
 - 실습 : 윤동주 '별헤는 밤' 분석하기
   - my_tokenizer 라는 토크나이저 생성, 시를 잘 분석할 수 있는 애널라이저 넣어보기
   - 내가 생각한 방법 : 문장별로 나누기 -> "요,","다." 를 기준으로 나누고 싶음
