@@ -30,7 +30,8 @@ $ uvicorn flask-server1:app --log-level info  1> "server1.log"
 
 ```
 <br>
-```JavaScirpt
+
+```JavaScript
 # server2라는 폴더에 아래 파일을 flask_server2.py라는 이름으로 작성 후 실행
 # pip install flask
 from flask import Flask
