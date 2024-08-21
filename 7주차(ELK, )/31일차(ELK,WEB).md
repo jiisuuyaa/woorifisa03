@@ -102,26 +102,7 @@ document.getElementById('welcome').innerText +=
 ```
 <br>
 
-```JavaScript
-# server2라는 폴더에 아래 파일을 flask_server2.py라는 이름으로 작성 후 실행
-# pip install flask
-from flask import Flask
 
-app = Flask(__name__)
-
-@app.route('/hello')
-def hello():
-    return 'hello world!'
-
-@app.route('/bye')
-def bye():
-    return 'bye world!'
-
-if __name__ == '__main__':
-    app.run(debug=True)
-
-$ python flask_server2.py --logger 2> "server2.log"
-```
 - <head> : 눈에 보이지 않는 것을 모아두는 곳 _ 설정할 필요가 없다면 생략가능, body만 있어도 동작한다. 
 태그 이름은 대소문자를 구분하지 않지만, 보통 소문자로 작성
 
